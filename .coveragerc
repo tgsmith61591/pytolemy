@@ -3,4 +3,6 @@ source = pytolemy
 include = */pytolemy/*
 omit =
     */pytolemy/setup.py
+    */pytolemy/__check_build/*
+    */pytolemy/_build_utils/*
     */setup.py
