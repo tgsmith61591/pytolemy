@@ -41,12 +41,11 @@ def haversine(lon1, lat1, lon2, lat2, unit='km'):
 
     Examples
     --------
-    >>> haversine(-122.20833, 49.3, -122.22500,
-    ...           49.26667, 'km')  # +doctest: SKIP
+    >>> from pytolemy.utils.distance import haversine as hvsn
+    >>> hvsn(-122.20833, 49.3, -122.22500, 49.26667, 'km')  # doctest: +SKIP
     3.8994885745989176
 
-    >>> haversine(-122.20833, 49.3, -122.22500,
-    ...           49.26667, 'mi')  # +doctest: SKIP
+    >>> hvsn(-122.20833, 49.3, -122.22500, 49.26667, 'mi')  # doctest: +SKIP
     2.423045569695307
 
     Notes
