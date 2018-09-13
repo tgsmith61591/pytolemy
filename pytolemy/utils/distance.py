@@ -18,8 +18,9 @@ _VALID_UNITS = {
 def haversine(lon1, lat1, lon2, lat2, unit='km'):
     """Compute the great-arc distance.
 
-    Determine the circle distance between two points on a
-    sphere given their longitude and latitudes
+    This function determines the circle distance between two points on a
+    sphere given their longitude and latitudes coordinates in decimal degrees based on the average radius of the Earth.
+    Please note this function accepts degrees for lat/lon, not radians.
 
     Parameters
     ----------
@@ -48,6 +49,14 @@ def haversine(lon1, lat1, lon2, lat2, unit='km'):
     ...           49.26667, 'mi')  # +doctest: SKIP
     2.423045569695307
 
+    Notes
+    --------
+
+    * This function assumes a spherical earth and ignores the ellipsoidal effect.
+
+    * The mean radius is assumed to be 6372.8 km or 3959.9 mi.
+
+
     Returns
     -------
     dist : float
@@ -55,7 +64,8 @@ def haversine(lon1, lat1, lon2, lat2, unit='km'):
 
     References
     ----------
-    .. [1] TODO: Gigi add a reference link
+    .. [1] https://stackoverflow.com/questions/4913349/haversine-formula-in-python-bearing-and-distance-between-two-gps-points
+    .. [2] https://www.vcalc.com/wiki/vCalc/Haversine+-+Distance
     """
     # assert they're all floats
     assert_dtype((float, int), lon1, lat1, lon2, lat2)
