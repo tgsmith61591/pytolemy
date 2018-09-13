@@ -747,9 +747,9 @@ int __pyx_module_is_main_pytolemy____check_build___check_build = 0;
 static const char __pyx_k_main[] = "__main__";
 static const char __pyx_k_test[] = "__test__";
 static const char __pyx_k_check_build[] = "check_build";
-static const char __pyx_k_Users_fp7y_Documents_python_pyt[] = "/Users/fp7y/Documents/python/pytolemy/pytolemy/__check_build/_check_build.pyx";
+static const char __pyx_k_Users_ee9w_Pytolemy_Project_pyt[] = "/Users/ee9w/Pytolemy_Project/pytolemy/pytolemy/__check_build/_check_build.pyx";
 static const char __pyx_k_pytolemy___check_build__check_bu[] = "pytolemy.__check_build._check_build";
-static PyObject *__pyx_kp_s_Users_fp7y_Documents_python_pyt;
+static PyObject *__pyx_kp_s_Users_ee9w_Pytolemy_Project_pyt;
 static PyObject *__pyx_n_s_check_build;
 static PyObject *__pyx_n_s_main;
 static PyObject *__pyx_n_s_pytolemy___check_build__check_bu;
@@ -824,7 +824,7 @@ static struct PyModuleDef __pyx_moduledef = {
 #endif
 
 static __Pyx_StringTabEntry __pyx_string_tab[] = {
-  {&__pyx_kp_s_Users_fp7y_Documents_python_pyt, __pyx_k_Users_fp7y_Documents_python_pyt, sizeof(__pyx_k_Users_fp7y_Documents_python_pyt), 0, 0, 1, 0},
+  {&__pyx_kp_s_Users_ee9w_Pytolemy_Project_pyt, __pyx_k_Users_ee9w_Pytolemy_Project_pyt, sizeof(__pyx_k_Users_ee9w_Pytolemy_Project_pyt), 0, 0, 1, 0},
   {&__pyx_n_s_check_build, __pyx_k_check_build, sizeof(__pyx_k_check_build), 0, 0, 1, 1},
   {&__pyx_n_s_main, __pyx_k_main, sizeof(__pyx_k_main), 0, 0, 1, 1},
   {&__pyx_n_s_pytolemy___check_build__check_bu, __pyx_k_pytolemy___check_build__check_bu, sizeof(__pyx_k_pytolemy___check_build__check_bu), 0, 0, 1, 1},
@@ -843,7 +843,7 @@ static int __Pyx_InitCachedConstants(void) {
  * def check_build():             # <<<<<<<<<<<<<<
  *     return
  */
-  __pyx_codeobj_ = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_fp7y_Documents_python_pyt, __pyx_n_s_check_build, 1, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj_)) __PYX_ERR(0, 1, __pyx_L1_error)
+  __pyx_codeobj_ = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_ee9w_Pytolemy_Project_pyt, __pyx_n_s_check_build, 1, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj_)) __PYX_ERR(0, 1, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;

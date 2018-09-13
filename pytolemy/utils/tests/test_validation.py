@@ -2,8 +2,19 @@
 
 from __future__ import absolute_import
 
-from pytolemy.utils.validation import is_iterable
+from pytolemy.utils.validation import is_iterable, assert_dtype
+
 import numpy as np
+import pytest
+
+
+def test_assert_dtype():
+    assert_dtype(float, 1.5)
+    assert_dtype((float, int), 1.5)
+    assert_dtype((float, int), 1)
+
+    with pytest.raises(AssertionError):
+        assert_dtype(str, 1.5)
 
 
 def test_is_iterable():
@@ -20,3 +31,5 @@ def test_is_iterable():
 
     # prove that other things, like ints, are NOT
     assert not is_iterable(123)
+
+
