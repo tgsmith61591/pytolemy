@@ -1,0 +1,6 @@
+[run]
+source = pytolemy
+include = */pytolemy/*
+omit =
+    */pytolemy/setup.py
+    */setup.py
