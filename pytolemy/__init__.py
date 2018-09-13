@@ -21,9 +21,10 @@ else:
     # Global namespace imports
     # Here, you'll import submodules from your package to make them importable
     # at the top level of the package. For instance, if you want to be able to
-    # import 'bear.utils', you'd mark 'utils' here as follows:
+    # import 'pytolemy.utils', you'd mark 'utils' here as follows:
+
     __all__ = [
-        # Submodules, e.g., 'utils'
+        'utils'
     ]
 
 
