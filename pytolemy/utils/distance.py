@@ -18,23 +18,33 @@ _VALID_UNITS = {
 def haversine(lon1, lat1, lon2, lat2, unit='km'):
     """Compute the great-arc distance.
 
-    This function determines the circle distance between two points on a
-    sphere given their longitude and latitudes coordinates in decimal degrees based on the average radius of the Earth.
+    The haversine formula determines the great-circle distance between two
+    points on a sphere given their longitude and latitudes coordinates in
+    decimal degrees based on the average radius of the Earth.
+    The great-circle is the largest circle you can draw from a given sphere.
     Please note this function accepts degrees for lat/lon, not radians.
+
+    :math:`\operatorname {hav} (\theta )=\sin ^{2}\left({\frac
+    {\theta }{2}}\right)={\frac {1-\cos(\theta )}{2}}`
+
+    :math: '{\displaystyle d=2r\arcsin \left({\sqrt {\operatorname {hav}
+    (\varphi _{2}-\varphi _{1})
+    +\cos(\varphi _{1})\cos(\varphi _{2})\operatorname {hav}
+     (\lambda _{2}-\lambda _{1})}}\right)}'
 
     Parameters
     ----------
     lon1 : float
-        decimal degrees
+        The longitude in decimal degrees of the first point.
 
     lat1 : float
-        decimal degrees
+        The latitude in decimal degrees of the first point.
 
     lon2 : float
-        decimal degrees
+        The longitude in decimal degrees of the second point.
 
     lat2 : float
-        decimal degrees
+        The latitude in decimal degrees of the second point.
 
     unit : str
         Either 'km' for kilometers or 'mi' for miles
