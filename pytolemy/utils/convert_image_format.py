@@ -13,7 +13,7 @@ __all__ = [
 def jp2_to_tiff(jp2_image_path):
     im = Image.open(jp2_image_path)
     imarray = np.array(im) # converts to array
-    im.show()
+    #im.show()
 
 def tiff_to_jp2(tiff_image_path):
     im = Image.open(tiff_image_path)
