@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <origin>U.S. Geological Survey</origin>
+        <pubdate>20130623</pubdate>
+        <title>USGS High Resolution Orthoimage USNG, 19TCG240845, Boston/Providence, MA</title>
+        <geoform>remote-sensing image</geoform>
+        <pubinfo>
+          <pubplace>Rolla, MO</pubplace>
+          <publish>U.S. Geological Survey</publish>
+        </pubinfo>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>This data set consists of 0.3-meter pixel resolution (approximately 1-foot), 4-band (R, G, B, IR) orthoimages covering the urban area footprint.  An orthoimage is remotely sensed image data in which displacement of features in the image caused by terrain relief and sensor orientation have been mathematically removed. Orthoimagery combines the image characteristics of a photograph with the geometric qualities of a map.  The design accuracy is estimated not to exceed 1.52-meters NSSDA 95% confidence (0.88-meters Root Mean Squared (RMSE) Error XY (0.62 meter RMSE X or Y).  Each orthoimage provides imagery over a 1500-meter by 1500-meter block on the ground. There is no image overlap between adjacent files. The projected coordinate system is UTM Zone 19N with a NAD83 (2011) datum. The naming convention is based on the U. S. National Grid (USNG), taking the coordinates of the SW corner of the orthoimage.</abstract>
+      <purpose>This data depicts geographic features on the surface of the earth.  It was created to provide easily accessible geospatial data which is readily available to enhance the capability of Federal, State, and local emergency responders, as well as plan for homeland security efforts.  This data also supports The National Map.</purpose>
+    </descript>
+    <timeperd>
+      <timeinfo>
+        <sngdate>
+          <caldate>20130426</caldate>
+        </sngdate>
+      </timeinfo>
+      <current>ground condition</current>
+    </timeperd>
+    <status>
+      <progress>Complete</progress>
+      <update>irregular</update>
+    </status>
+    <spdom>
+      <bounding>
+        <westbc>-71.135378</westbc>
+        <eastbc>-71.116738</eastbc>
+        <northbc>+42.306697</northbc>
+        <southbc>+42.292860</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>None</themekt>
+        <themekey>0.3 meter orthoimage</themekey>
+        <themekey>rectified photograph</themekey>
+        <themekey>rectified image</themekey>
+        <themekey>orthophoto</themekey>
+        <themekey>4-band (R, G, B, IR) orthophoto </themekey>
+        <themekey>orthoimage</themekey>
+        <themekey>image map</themekey>
+      </theme>
+      <place>
+        <placekt>U.S. Department of Commerce, 1995, Countries, dependencies, areas of special sovereignty, and their principal administrative divisions, Federal Information Processing Standard (FIPS) 10-4): Washington, D.C., National Institute of Standards and Technology.</placekt>
+        <placekey>US</placekey>
+      </place>
+      <place>
+        <placekt>U.S. Department of Commerce, 1987, Codes for the Identification of the States, the District of Columbia and the outlying areas of the United States, and associated areas (Federal Information Processing Standard (FIPS) 5-2): Washington, D.C., National Institute of Standards and Technology.</placekt>
+        <placekey>US</placekey>
+      </place>
+      <place>
+        <placekt>None</placekt>
+        <placekey>Boston/Providence, MA</placekey>
+      </place>
+    </keywords>
+    <accconst>None</accconst>
+    <useconst>None.  However, users should be aware that temporal changes may have occurred since this data set was collected and that some parts of this data may no longer represent actual surface conditions.  Users should not use this data for critical applications without a full awareness of it's limitations.
+Acknowledgment of the U.S. Geological Survey would be appreciated for products derived from these data.</useconst>
+    <datacred>Fugro EarthData, Inc.</datacred>
+    <native>The following software is used for validation of the imagery and surface modeling
+1. Aerotriangulation - Pixel Factory 3.2, Linux
+2. Digital Orthophotography - Pixel Factory 3.2, Linux
+3. Bentley - MicroStation
+4. Pixel Factory 3.2, Linux
+5. ESRI - ArcMap
+6. ERDAS Imagine
+7. TerraScan/TerraModel
+8. SimActive Correlator3D
+9. Fugro EarthData Proprietary software
+10. Adobe - Photoshop
+11. GPro </native>
+  </idinfo>
+  <dataqual>
+    <attracc>
+      <attraccr>Radiometry is verified by visual inspection of the digital orthophoto.  Slight systematic radiometric differences may exist between adjacent orthoimage files; these are due primarily to differences in source image capture dates and sun angles along flight lines. These differences can be observed in an image's general lightness or darkness when it is compared to adjacent orthoimage file coverages. Tonal balancing may be performed over a group of images during the mosaicking process which may serve to lighten or darken adjacent images for better color tone matching.</attraccr>
+    </attracc>
+    <logic>All GeoTIFF tagged data and image file sizes are validated using commercial GIS software to ensure proper loading before being archived.   This validation procedure ensures correct physical format and field values for tagged elements.  Seamlines and tile edges are visually inspected.  Seamline mismatches are not corrected unless the overall displacement exceeds 0.6 meters.</logic>
+    <complete>Orthoimages are visually inspected for completeness to ensure that no gaps or image misplacements exist within and between adjacent images. These images are derived by mosaicking multiple images to ensure complete coverage. Source imagery is cloud free. Imagery acquisition during leaf-on conditions was approved.</complete>
+    <posacc>
+      <horizpa>
+        <horizpar>The orthophotos were created to be fully compliant with a horizontal positional accuracy shall not exceed 1.52 meter tested to NSSDA Standards (95% confidence).</horizpar>
+        <qhorizpa>
+          <horizpav>0.50</horizpav>
+          <horizpae>Federal Geographic Data Committee, 1998, Geospatial Positioning Accuracy Standard, Part 3, National Standard for Spatial Data Accuracy, FGDC-STD-007.3-1998</horizpae>
+        </qhorizpa>
+      </horizpa>
+    </posacc>
+    <lineage>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>Fugro EarthData, Inc.</origin>
+            <pubdate>20130426</pubdate>
+            <title>Boston/Providence, MA Raw ADS80 imagery</title>
+            <geoform>remote-sensing image</geoform>
+          </citeinfo>
+        </srccite>
+        <srcscale>2400</srcscale>
+        <typesrc>on-line</typesrc>
+        <srctime>
+          <timeinfo>
+            <mdattim>
+              <sngdate>
+                <caldate>20130415</caldate>
+              </sngdate>
+              <sngdate>
+                <caldate>20130416</caldate>
+              </sngdate>
+              <sngdate>
+                <caldate>20130417</caldate>
+              </sngdate>
+              <sngdate>
+                <caldate>20130418</caldate>
+              </sngdate>
+              <sngdate>
+                <caldate>20130421</caldate>
+              </sngdate>
+              <sngdate>
+                <caldate>20130422</caldate>
+              </sngdate>
+              <sngdate>
+                <caldate>20130424</caldate>
+              </sngdate>
+              <sngdate>
+                <caldate>20130426</caldate>
+              </sngdate>
+            </mdattim>
+          </timeinfo>
+          <srccurr>ground condition</srccurr>
+        </srctime>
+        <srccitea>wavelengths bands</srccitea>
+        <srccontr>raw red, green, blue, and near infrared wavelengths collected at 2,896 meters above mean terrain.  This is the input data for the digital orthophotos.</srccontr>
+      </srcinfo>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>TerraSurv, Inc.</origin>
+            <pubdate>20130418</pubdate>
+            <title>ground survey</title>
+          </citeinfo>
+        </srccite>
+        <typesrc>spreadsheet</typesrc>
+        <srctime>
+          <timeinfo>
+            <mdattim>
+              <sngdate>
+                <caldate>20130402</caldate>
+              </sngdate>
+              <sngdate>
+                <caldate>20130403</caldate>
+              </sngdate>
+              <sngdate>
+                <caldate>20130404</caldate>
+              </sngdate>
+              <sngdate>
+                <caldate>20130405</caldate>
+              </sngdate>
+            </mdattim>
+          </timeinfo>
+          <srccurr>ground condition</srccurr>
+        </srctime>
+        <srccitea>ground control</srccitea>
+        <srccontr>Ground control survey to support photogrammetric mapping and blind QC points.  NOTE: Ground control GC-09 13031F could not be measured due to tree shadow over the point. Given its location a control is needed in this area and it was agreed upon that checkpoint QC-22 13031S could be used instead. GC-09 13031F would still be able to be used as a vertical checkpoint; however, the shadows over it would prohibit the horizontal measurement of the point.</srccontr>
+      </srcinfo>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>Fugro EarthData, Inc.</origin>
+            <pubdate>20130531</pubdate>
+            <title>Pixel Factory DEM</title>
+          </citeinfo>
+        </srccite>
+        <typesrc>network drives</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>20130531</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>ground condition</srccurr>
+        </srctime>
+        <srccitea>surface</srccitea>
+        <srccontr>Autocorrelated surface generated to support the development of orthophotography.  The surface is edited into a bare earth DEM for use in orthorectification.</srccontr>
+      </srcinfo>
+      <procstep>
+        <procdesc>The digital orthophotography is comprised of a 24 bit, RGBN bands, 30cm pixel resolution ground and true orthos covering the Boston/Providence, MA project area.  The imagery was acquired on April 15, 16, 17, 18, 21, 22, 24, and 26, 2013.  The Pixel Factory process was used in the generation of the orthoimagery covering all project tiles.  The rectification process was then run using the processed DSM on each flight line. The quicklook (reduced resolution rectification) of each flight line are exported out of Pixel Factory.   Radiometric adjustments were made to the quicklooks using Fugro proprietary tools. The radiometrically balanced imagery was then re-imported into the Pixel Factory system and the histogram from the quicklook was applied to the full resolution imagery.  Mosaic lines were placed, joining the ADS80 imagery strips. An initial QA/QC was performed by the technician to ensure that the mosaic lines were appropriately placed and that there was appropriate imagery coverage. The final imagery data set is removed from the Pixel Factory environment in a process called "packaging" where the individual tiles are created. All data processing in the Pixel Factory system is performed in UTM Zone 19N meters; it is during packaging that final datum and projection are defined. The created tiles are reviewed to ensure the output was successful and ground control points are measured and verified for accuracy.  QA/QC was performed looking for anomalies, smears and other indications of problems within the digital orthophoto creation process, and interactive radiometric adjustment applied where needed. Additional global radiometric adjustments were applied to the completed orthos in Adobe Photoshop to enhance the color and/or contrast as needed.  The final digital ortho products were delivered in GeoTIFF format.</procdesc>
+        <procdate>20130623</procdate>
+      </procstep>
+    </lineage>
+  </dataqual>
+  <spdoinfo>
+    <direct>Raster</direct>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <planar>
+        <gridsys>
+          <gridsysn>Universal Transverse Mercator</gridsysn>
+          <utm>
+            <utmzone>19</utmzone>
+            <transmer>
+              <sfctrmer>0.999600</sfctrmer>
+              <longcm>-69.000000</longcm>
+              <latprjo>0.000000</latprjo>
+              <feast>500000.000000</feast>
+              <fnorth>0.000000</fnorth>
+            </transmer>
+          </utm>
+        </gridsys>
+        <planci>
+          <plance>row and column</plance>
+          <coordrep>
+            <absres>0.3</absres>
+            <ordres>0.3</ordres>
+          </coordrep>
+          <plandu>meters</plandu>
+        </planci>
+      </planar>
+      <geodetic>
+        <horizdn>North American Datum of 1983 (2011)</horizdn>
+        <ellips>Geodetic Reference System 80</ellips>
+        <semiaxis>6378137.000000</semiaxis>
+        <denflat>298.257222</denflat>
+      </geodetic>
+    </horizsys>
+  </spref>
+  <eainfo>
+    <overview>
+      <eaover>The orthoimagery is organized in four color bands or channels which represent the red, green, blue and near infrared (RGBN) portions of the spectrum.  Each image pixel is assigned a quadruplet of numeric values, one for each color band.  Numeric values range from 0 to 255.</eaover>
+      <eadetcit>U.S. Department of the Interior, U.S. Geological Survey, 1996, Standards for Digital Orthophotos: Reston, VA.</eadetcit>
+    </overview>
+  </eainfo>
+  <metainfo>
+    <metd>20130626</metd>
+    <metc>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>U.S. Geological Survey</cntorg>
+        </cntorgp>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>Customer Services</address>
+          <address>U.S. Geological Survey</address>
+          <address>EROS Data Center</address>
+          <address>47914 252nd Street</address>
+          <city>Sioux Falls</city>
+          <state>SD</state>
+          <postal>57198-0001</postal>
+          <country>US</country>
+        </cntaddr>
+        <cntvoice>1-800-252-4547</cntvoice>
+        <cnttdd>1-605-594-6933</cnttdd>
+        <cntfax>1-605-594-6589</cntfax>
+        <cntemail>custserv@usgs.gov</cntemail>
+        <hours>Monday through Friday 8:00 AM to 4:00 PM (Central Time)</hours>
+        <cntinst>The above is the contact information for Earth Resources Observation and Science Center in Sioux Falls, SD.</cntinst>
+      </cntinfo>
+    </metc>
+    <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+  </metainfo>
+</metadata>

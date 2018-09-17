@@ -1,1 +1,4 @@
 numpy>=1.12
+Pillow
+opencv-python
+gdal
