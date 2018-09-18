@@ -4,6 +4,7 @@ from __future__ import absolute_import
 #from osgeo import gdal
 #import gdaltest
 from PIL import Image
+
 import numpy as np
 import os
 
@@ -14,7 +15,6 @@ __all__ = [
 
 def jp2_to_tiff(jp2_image_path):
     file_name = os.path.splitext(jp2_image_path)[0]
-
 
  #   input_image = gdal.Open(jp2_image_path)
  #   output_image = gdal.Translate('output.tif', input_image)

@@ -6,7 +6,9 @@ import pytest
 
 
 def test_jp2_to_tiff():  # Check if tiff type image
-    jp2_to_tiff('19TCG240845\19TCG240845.jp2')
+    print('test')
+    #jp2_to_tiff('19TCG240845/19TCG240845.jp2')
 
 def test_tiff_to_jp2():# Check if tiff type image
-    tiff_to_jp2('19TCG240845\19TCG240845.tif')
+    print('test')
+   # tiff_to_jp2('19TCG240845/19TCG240845.tif')
