@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 #
 # Auto-generated with bear v0.1.1, (c) Taylor G Smith
+# https://github.com/tgsmith61591/bear
 
 __version__ = '0.1.0'
 
@@ -9,6 +10,11 @@ try:
     # process. It is used to enable importing subpackages of bear when
     # the binaries are not built
     __PYTOLEMY_SETUP__
+
+    # Check on the GDAL import and if it doesn't exist, fail out
+    from pytolemy._build_utils import check_gdal
+    check_gdal()
+
 except NameError:
     __PYTOLEMY_SETUP__ = False
 
@@ -19,9 +25,6 @@ if __PYTOLEMY_SETUP__:
     del _sys
 else:
     # Global namespace imports
-    # Here, you'll import submodules from your package to make them importable
-    # at the top level of the package. For instance, if you want to be able to
-    # import 'pytolemy.utils', you'd mark 'utils' here as follows:
 
     __all__ = [
         'utils'
