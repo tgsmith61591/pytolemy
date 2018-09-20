@@ -55,11 +55,14 @@ build_script:
       $GDAL_WHEEL = "GDAL-2.2.4-cp$VER-cp" + $VER + "m-$env:GDAL_ARCH.whl"
       echo "GDAL wheel=$GDAL_WHEEL"
 
+      # Download the file
       Start-FileDownload "https://download.lfd.uci.edu/pythonlibs/h2ufg7oq/$GDAL_WHEEL" $GDAL_WHEEL; echo "Finished downloading GDAL wheel"
-      python -m pip install $GDAL_WHEEL
 
-  # Build the package
-  - python setup.py develop
+      # Install GDAL wheel
+      pip install $GDAL_WHEEL
+
+      # Build the package
+      python setup.py develop
 
 test_script:
   # Change to a non-source folder to make sure we run the tests on the

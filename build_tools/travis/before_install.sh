@@ -44,5 +44,13 @@ elif [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
 
   # After oclint is uninstalled, we should be able to install GCC
   brew install gcc
-  brew install gdal
+
+  # Maybe install GDAL
+  if brew ls --versions myformula > /dev/null; then
+      # The package is installed
+      echo "Already have GDAL"
+  else
+      # The package is not installed
+      brew install gdal
+  fi
 fi
