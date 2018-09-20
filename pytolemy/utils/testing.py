@@ -22,7 +22,7 @@ def with_cached_test_images(func):
 
     Examples
     --------
-    >>> @with_cached_test_images
+    >>> @with_cached_test_images  # doctest: +SKIP
     >>> def some_testing_function():
     ...     assert True
     """
