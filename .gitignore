@@ -31,3 +31,14 @@ cythonize.dat
 
 # pycharm
 .idea/
+
+# images
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.jp2
+*.tif
+*.j2w
+*.xml
+*.aux
