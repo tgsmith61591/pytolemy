@@ -92,27 +92,30 @@ ___________________________________________________________________________
 In order to install pytolemy, you must have a working GDAL distribution and
 the pygdal python library.
 
-Windows:
+Windows (for, e.g., Python 3.5 on 32-bit):
 
-    https://gis.stackexchange.com/questions/2276/installing-gdal-with-python-on-windows
+    1. Download wheel from https://download.lfd.uci.edu/pythonlibs/h2ufg7oq/GDAL-2.2.4-cp35-cp35m-win32.whl
+    2. > python -m pip install GDAL-2.2.4-cp35-cp35m-win32.whl
 
 Mac:
 
     $ brew install gdal
+    $ pip install pygdal
 
 Linux:
 
     $ sudo apt-get install libgdal1-dev
+    $ pip install pygdal
     
-You'll also need to install a version of pygdal corresponding to your version
-of GDAL. You can find your version of GDAL like so:
+On Mac and Linux, you'll need to install a version of pygdal corresponding to 
+your version of GDAL. You can find your version of GDAL like so:
 
     $ gdal-config --version
     1.8.1
     
-For version 1.8.1, to install the corresponding python package, you'd run:
+E.g., for version 1.8.1, to install the corresponding python package, you'd run:
 
-    $ pip install pygdal>=1.8.1.0,<=1.8.1.999
+    $ pip install pygdal==1.8.1
     
 See https://github.com/nextgis/pygdal for information on supported GDAL 
 versions.
