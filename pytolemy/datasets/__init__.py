@@ -68,14 +68,9 @@ def _load_and_cache_dataset(zip_key):
     # Check if it's already there
     output_location = join(cache, zip_key[:-4])
     if not exists(output_location):
-        copy(zip_key, cache)  # data/XXX.zip -> cache/XXX.zip
-
         # Unzip it IN the cache, and then nuke the zip file
-        with zipfile.ZipFile(output_location, 'r') as zf:
-            zf.extractall(output_location)  # cache/XXX.zip -> cache/XXX/
-
-        # Finally, remove the staged zip file
-        os.unlink(os.path.join(cache, zip_key))  # rm cache/XXX.zip
+        with zipfile.ZipFile(zip_key, 'r') as zf:
+            zf.extractall(output_location)  # datasets/XXX.zip -> cache/XXX/
 
 
 def _get_module_path():
