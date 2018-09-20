@@ -46,5 +46,7 @@ elif [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
   brew install gcc
 
   # Maybe install GDAL
-  brew install gdal || echo "GDAL might already be installed?"
+  # brew install gdal || echo "GDAL might already be installed?"
+  # We need version 2.3.1
+  brew upgrade gdal || echo "GDAL might be up-to-date"
 fi
