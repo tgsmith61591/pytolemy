@@ -46,11 +46,5 @@ elif [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
   brew install gcc
 
   # Maybe install GDAL
-  if brew ls --versions myformula > /dev/null; then
-      # The package is installed
-      echo "Already have GDAL"
-  else
-      # The package is not installed
-      brew install gdal
-  fi
+  brew install gdal || echo "GDAL might already be installed?"
 fi
