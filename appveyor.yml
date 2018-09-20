@@ -14,12 +14,16 @@ environment:
 
   matrix:
     - PY_MAJOR_VER: 3
+      PY_MINOR_VER: 5
       PYTHON_ARCH: "x86"
+      GDAL_ARCH: "win32"
       PYTHON_VERSION: "3.5"
       MINICONDA_MICRO_VERSION: "31"
 
     - PY_MAJOR_VER: 3
+      PY_MINOR_VER: 5
       PYTHON_ARCH: "x86_64"
+      GDAL_ARCH: "win_amd64"
       PYTHON_VERSION: "3.5"
       MINICONDA_MICRO_VERSION: "31"
 
@@ -44,6 +48,12 @@ build_script:
 
   # Things we'll need for deployment
   - pip install wheel twine pytest
+
+  # Download GDAL
+  - ps: |
+      $GDAL_WHEEL = "GDAL-2.2.4-cp$env:PY_MAJOR_VER$env:PY_MINOR_VER-cp$env:PY_MAJOR_VER$env:PY_MINOR_VERm-$env:GDAL_ARCH.whl"
+      Start-FileDownload "https://download.lfd.uci.edu/pythonlibs/h2ufg7oq/$GDAL_WHEEL" $GDAL_WHEEL; echo "Finished downloading GDAL wheel"
+      python -m pip install $GDAL_WHEEL
 
   # Build the package
   - python setup.py develop

@@ -71,6 +71,10 @@ if [[ "$TEST_DOCSTRINGS" == "true" ]]; then
     pip install sphinx numpydoc  # numpydoc requires sphinx
 fi
 
+# Install pygdal but it depends on the version of GDAL...
+gdal_version=`gdal-config --version`
+pip install pygdal>=${gdal_version}.0,<=${gdal_version}.999
+
 # now run the python setup. This implicitly builds all the C code with build_ext
 python setup.py develop
 

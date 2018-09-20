@@ -16,7 +16,7 @@ _VALID_UNITS = {
 
 
 def haversine(lon1, lat1, lon2, lat2, unit='km'):
-    """Compute the great-arc distance.
+    r"""Compute the great-arc distance.
 
     The haversine formula determines the great-circle distance between two
     points on a sphere given their longitude and latitudes coordinates in
@@ -27,10 +27,10 @@ def haversine(lon1, lat1, lon2, lat2, unit='km'):
     :math:`\operatorname {hav} (\theta )=\sin ^{2}\left({\frac
     {\theta }{2}}\right)={\frac {1-\cos(\theta )}{2}}`
 
-    :math: '{\displaystyle d=2r\arcsin \left({\sqrt {\operatorname {hav}
+    :math:`{\displaystyle d=2r\arcsin \left({\sqrt {\operatorname {hav}
     (\varphi _{2}-\varphi _{1})
     +\cos(\varphi _{1})\cos(\varphi _{2})\operatorname {hav}
-     (\lambda _{2}-\lambda _{1})}}\right)}'
+     (\lambda _{2}-\lambda _{1})}}\right)}`
 
     Parameters
     ----------
@@ -60,11 +60,8 @@ def haversine(lon1, lat1, lon2, lat2, unit='km'):
 
     Notes
     --------
-
     * This function assumes a spherical earth and ignores the ellipsoidal effect.
-
     * The mean radius is assumed to be 6372.8 km or 3959.9 mi.
-
 
     Returns
     -------
