@@ -33,12 +33,12 @@ cythonize.dat
 .idea/
 
 # images
-*.jpg
-*.jpeg
-*.png
-*.gif
-*.jp2
-*.tif
-*.j2w
-*.xml
-*.aux
+datasets/*.jpg
+datasets/*.jpeg
+datasets/*.png
+datasets/*.gif
+datasets/*.jp2
+datasets/*.tif
+datasets/*.j2w
+datasets/*.xml
+datasets/*.aux

@@ -6,7 +6,7 @@ import os
 from os.path import dirname, join, abspath, exists, expanduser
 
 import zipfile
-from shutil import copy
+from shutil import copyfile
 
 __all__ = [
     '_cache_test_data',
@@ -29,12 +29,12 @@ def _safe_mkdirs(loc):
     """
     try:
         os.makedirs(loc)
-        return loc
     # since this is a race condition, just try to make it
     except OSError as e:
         # Anything OTHER than the dir already exists error
         if e.errno != 17:
             raise
+    return loc
 
 
 def _get_cache_location():
@@ -49,7 +49,7 @@ def _get_cache_location():
                           expanduser(join('~', 'pytolemy_data')))
 
 
-def _load_and_cache_dataset(zip_key):
+def _decompress_and_cache_dataset(zip_key):
     """Unzip and cache a dataset from ``datasets/data``.
 
     Parameters
@@ -66,11 +66,12 @@ def _load_and_cache_dataset(zip_key):
     cache = _safe_mkdirs(_get_cache_location())  # e.g., /Users/<you>/..._data
 
     # Check if it's already there
-    output_location = join(cache, zip_key[:-4])
+    filename = zip_key.split(os.sep)[-1]
+    output_location = join(cache, filename[:-4])
     if not exists(output_location):
-        # Unzip it IN the cache, and then nuke the zip file
+        # Unzip it from the datasets dir INTO the cache
         with zipfile.ZipFile(zip_key, 'r') as zf:
-            zf.extractall(output_location)  # datasets/XXX.zip -> cache/XXX/
+            zf.extractall(cache)  # datasets/../XXX.zip -> cache/XXX/
 
 
 def _get_module_path():
@@ -80,5 +81,5 @@ def _get_module_path():
 
 def _cache_test_data():
     """Cache and unzip the test data (19TC....zip)"""
-    _load_and_cache_dataset(
+    _decompress_and_cache_dataset(
         join(_get_module_path(), 'data', '19TCG240875.zip'))

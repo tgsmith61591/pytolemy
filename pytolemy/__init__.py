@@ -13,7 +13,7 @@ try:
 
     # Check on the GDAL import and if it doesn't exist, fail out
     from pytolemy._build_utils import check_gdal
-    check_gdal()
+    #check_gdal()
 
 except NameError:
     __PYTOLEMY_SETUP__ = False
