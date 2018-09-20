@@ -51,7 +51,10 @@ build_script:
 
   # Download GDAL
   - ps: |
-      $GDAL_WHEEL = "GDAL-2.2.4-cp$env:PY_MAJOR_VER$env:PY_MINOR_VER-cp$env:PY_MAJOR_VER$env:PY_MINOR_VERm-$env:GDAL_ARCH.whl"
+      $VER = $env:PY_MAJOR_VER$env:PY_MINOR_VER
+      $GDAL_WHEEL = "GDAL-2.2.4-cp$VER-cp" + $VER + "m-$env:GDAL_ARCH.whl"
+      echo "GDAL wheel=$GDAL_WHEEL"
+
       Start-FileDownload "https://download.lfd.uci.edu/pythonlibs/h2ufg7oq/$GDAL_WHEEL" $GDAL_WHEEL; echo "Finished downloading GDAL wheel"
       python -m pip install $GDAL_WHEEL
 
