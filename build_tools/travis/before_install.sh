@@ -49,4 +49,7 @@ elif [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
   # brew install gdal || echo "GDAL might already be installed?"
   # We need version 2.3.1
   brew upgrade gdal || echo "GDAL might be up-to-date"
+
+  # Set the C++ path per this issue: https://github.com/openMVG/openMVG/issues/316
+  export CPLUS_INCLUDE_PATH="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/"
 fi
