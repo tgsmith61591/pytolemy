@@ -80,3 +80,48 @@ def maybe_cythonize_extensions(top_path, config):
             raise
 
         config.ext_modules = cythonize(config.ext_modules)
+
+
+def check_gdal():
+    # Raise a comprehensible error for a GDAL import failure
+    try:
+        from osgeo import gdal
+    except ImportError as e:
+        raise BuildError("""%s
+___________________________________________________________________________
+In order to install pytolemy, you must have a working GDAL distribution. For
+Windows, it is a bit easier:
+
+Windows (for, e.g., Python 3.5 on 32-bit):
+
+    1. Download wheel from https://download.lfd.uci.edu/pythonlibs/h2ufg7oq/GDAL-2.2.4-cp35-cp35m-win32.whl
+    2. > python -m pip install GDAL-2.2.4-cp35-cp35m-win32.whl
+
+On a Mac or Linux machine, you'll need the pygdal python package as well. Your
+version of pygdal should correspond to your version of GDAL. You can find your 
+version of GDAL (after installing) like so:
+
+    $ gdal-config --version
+    1.8.1
+    
+E.g., for version 1.8.1, to install the corresponding python package, you'd run:
+
+    $ pip install pygdal==1.8.1
+    
+See https://github.com/nextgis/pygdal for information on supported GDAL 
+versions. To install GDAL and the python package:
+
+Mac:
+
+    $ brew install gdal
+    $ pip install pygdal
+
+Linux:
+
+    $ sudo apt-get install libgdal1-dev
+    $ pip install pygdal
+""" % e)
+
+
+class BuildError(BaseException):
+    """Used to raise errors during the build"""

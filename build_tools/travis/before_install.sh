@@ -12,12 +12,11 @@ if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
 
   # This is a hack, and a result of the way Bear auto-generates this script
   # if C is required. false is formated in by the __main__
-  if [[ "false" == "true" ]]; then
-    echo "Downloading gcc, g++ & gfortran"
-    sudo apt-get install -y gcc
-    sudo apt-get install -y g++
-    sudo apt-get install -y gfortran
-  fi
+  echo "Downloading gcc, g++ & gfortran"
+  sudo apt-get install -y gcc
+  sudo apt-get install -y g++
+  sudo apt-get install -y gfortran
+  sudo apt-get install libgdal1-dev
 
 # Workaround for https://github.com/travis-ci/travis-ci/issues/6307, which
 # caused the following error on MacOS X workers:
@@ -44,7 +43,13 @@ elif [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
   # ==> Unlinking Binary '/usr/local/include/c++'.
 
   # After oclint is uninstalled, we should be able to install GCC
-  if [[ "false" == "true" ]]; then
-    brew install gcc
-  fi
+  brew install gcc
+
+  # Maybe install GDAL
+  # brew install gdal || echo "GDAL might already be installed?"
+  # We need version 2.3.1
+  brew upgrade gdal || echo "GDAL might be up-to-date"
+
+  # Set the C++ path per this issue: https://github.com/openMVG/openMVG/issues/316
+  export CPLUS_INCLUDE_PATH="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/"
 fi
