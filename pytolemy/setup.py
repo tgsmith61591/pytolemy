@@ -28,11 +28,13 @@ def configuration(parent_package='', top_path=None):
 
     # This is where you'll add your submodules that do NOT need Cythonizing,
     # e.g.: config.add_subpackage('utils')
+    config.add_subpackage('datasets')
     config.add_subpackage('utils')
 
     # This is where you'll add your module tests -- must be added after the
     # submodules were added above!
     # config.add_subpackage('utils/tests')
+    config.add_subpackage('datasets/tests')
     config.add_subpackage('utils/tests')
 
     # This is where you'll add (in the same format as above) the submodules

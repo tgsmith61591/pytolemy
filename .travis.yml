@@ -40,10 +40,12 @@ matrix:
 
     # This environment tests the newest supported Anaconda release (4.x) and
     # runs on linux
-    - os: linux
-      dist: trusty
-      env: DISTRIB="conda" PYTHON_VERSION="3.6.1"
-           COVERAGE=true DEPLOY=false TEST_DOCSTRINGS="true"
+    # TODO: eventually test 3.6.1, but it's currently unstable with GDAL
+    # https://github.com/OSGeo/gdal/issues/674
+    # - os: linux
+    #   dist: trusty
+    #   env: DISTRIB="conda" PYTHON_VERSION="3.6.1"
+    #        COVERAGE=true DEPLOY=false TEST_DOCSTRINGS="true"
 
 install: source build_tools/travis/install.sh
 before_script: bash build_tools/travis/before_script.sh

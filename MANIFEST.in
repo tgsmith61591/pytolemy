@@ -1,1 +1,3 @@
-recursive include pytolemy/*
+recursive-include pytolemy *
+recursive-include pytolemy/__check_build *.c *.pyx *.pyd *.so *.dylib *.dll
+recursive-include pytolemy/datasets/data *.zip
