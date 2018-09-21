@@ -43,10 +43,11 @@ def get_test_image_files():
     Examples
     --------
     >>> get_test_image_files()  # doctest: +SKIP
-    ['/Users/<user>/pytolemy_data/19TCG240875/19TCG240875.xml',
-     '/Users/<user>/pytolemy_data/19TCG240875/19TCG240875.j2w',
-     '/Users/<user>/pytolemy_data/19TCG240875/19TCG240875.jp2',
-     '/Users/<user>/pytolemy_data/19TCG240875/19TCG240875.aux']
+    ['/Users/<user>/pytolemy_data/19TCG240845/19TCG240875.xml',
+     '/Users/<user>/pytolemy_data/19TCG240845/19TCG240875.j2w',
+     '/Users/<user>/pytolemy_data/19TCG240845/19TCG240875.jp2',
+     '/Users/<user>/pytolemy_data/19TCG240845/19TCG240875.aux',
+     '/Users/<user>/pytolemy_data/19TCG240845/19TCG240875.tif']
 
     Notes
     -----
@@ -82,8 +83,8 @@ def get_test_image_dir():
 
     Examples
     --------
-    >>> get_test_image_dir()
-    '/Users/<user>/pytolemy_data/19TCG240875'
+    >>> get_test_image_dir()  # doctest: +SKIP
+    '/Users/<user>/pytolemy_data/19TCG240845'
 
     Returns
     -------
