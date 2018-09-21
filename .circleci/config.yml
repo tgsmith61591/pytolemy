@@ -4,7 +4,7 @@ jobs:
   # For testing PyPy rather than CPython
   pypy36:
     docker:
-      - image: circleci/pypy:3-6.0.0
+      - image: pypy:3-6.0.0
     steps:
       # Download and cache dependencies
       - restore_cache:
