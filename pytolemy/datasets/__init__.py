@@ -6,11 +6,10 @@ import os
 from os.path import dirname, join, abspath, exists, expanduser
 
 import zipfile
-from shutil import copyfile
 
 __all__ = [
     '_cache_test_data',
-    '_get_cache_location'
+    'get_data_home',
 ]
 
 
@@ -37,8 +36,12 @@ def _safe_mkdirs(loc):
     return loc
 
 
-def _get_cache_location():
+def get_data_home():
     """Get the location of the Pytolemy cache.
+
+    Return the location on disk where were cache datasets outside of
+    the package. Defaults to ``~/pytolemy_data``, but can be set via
+    environment variable using "PYTOLEMY_DATA_DIR".
 
     Returns
     -------
@@ -63,7 +66,7 @@ def _decompress_and_cache_dataset(zip_key):
     assert zip_key.endswith('.zip'), "zip_key must be a .zip file"
 
     # First thing: Get/Create the cache directory
-    cache = _safe_mkdirs(_get_cache_location())  # e.g., /Users/<you>/..._data
+    cache = _safe_mkdirs(get_data_home())  # e.g., /Users/<you>/..._data
 
     # Check if it's already there
     filename = zip_key.split(os.sep)[-1]

@@ -5,9 +5,12 @@
 from __future__ import absolute_import
 
 from functools import wraps
-from ..datasets import _cache_test_data
+import os
+
+from ..datasets import _cache_test_data, get_data_home
 
 __all__ = [
+    'get_test_image_dir',
     'with_cached_test_images'
 ]
 
@@ -33,5 +36,21 @@ def with_cached_test_images(func):
     return test_wrapper
 
 
+def get_test_image_dir():
+    """Get the directory of the cached test images.
+
+    Notes
+    -----
+    This can be iterated with ``os.walk``.
+
+    Returns
+    -------
+    data_dir : str
+        The location of the directory of test images.
+    """
+    return os.path.join(get_data_home(), '19TCG240875')
+
+
 # Avoid pb w nose
+get_test_image_dir.__test__ = False
 with_cached_test_images.__test__ = False
