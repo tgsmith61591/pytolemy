@@ -6,7 +6,7 @@ apt-get -yq update
 apt-get -yq install libatlas-dev libatlas-base-dev liblapack-dev gfortran ccache
 
 # Need gdal for pytolemy
-apt-get install libgdal1-dev
+apt-get -yq install libgdal1-dev
 
 # Don't test with Conda here, use virtualenv instead
 pip install virtualenv
