@@ -27,6 +27,8 @@ else:
     # Global namespace imports
 
     __all__ = [
+        'datasets',
+        'image',
         'utils'
     ]
 

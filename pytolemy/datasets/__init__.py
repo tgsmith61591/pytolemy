@@ -6,10 +6,12 @@ import os
 from os.path import dirname, join, abspath, exists, expanduser
 
 import zipfile
+import shutil
 
 __all__ = [
     '_cache_test_data',
     'get_data_home',
+    'remove_cache'
 ]
 
 
@@ -34,6 +36,23 @@ def _safe_mkdirs(loc):
         if e.errno != 17:
             raise
     return loc
+
+
+def remove_cache():
+    """Remove the cached contents of the pytolemy data directory.
+
+    Removes the pytolemy data directory (default=``~/pytolemy_data``) from
+    disk.
+
+    Notes
+    -----
+    Will *not* raise a FileNotFoundError if the cache does not exist; will
+    simply do nothing.
+    """
+    try:
+        shutil.rmtree(get_data_home())
+    except FileNotFoundError:  # no cached data
+        pass
 
 
 def get_data_home():
@@ -85,4 +104,4 @@ def _get_module_path():
 def _cache_test_data():
     """Cache and unzip the test data (19TC....zip)"""
     _decompress_and_cache_dataset(
-        join(_get_module_path(), 'data', '19TCG240875.zip'))
+        join(_get_module_path(), 'data', '19TCG240845.zip'))
