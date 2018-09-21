@@ -1,0 +1,18 @@
+version: 2
+
+jobs:
+  # For testing PyPy rather than CPython
+  pypy36:
+    docker:
+      - image: circleci/pypy:3-6.0.0
+    steps:
+      - checkout
+      - run: ./build_tools/circle/build_test_pypy.sh
+
+workflows:
+  version: 2
+
+  # All PyPy jobs:
+  pypy:
+    jobs:
+      - pypy36
